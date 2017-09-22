@@ -295,7 +295,7 @@ function IssueClient(jiraClient) {
      * @return {Promise} Resolved when data has been retrieved
      */
     this.deleteIssue = function (opts, callback) {
-        var options = this.buildRequestOptions(opts, '', 'DELETE', null, {deleteSubTasks: opts.deleteSubTasks});
+        var options = this.buildRequestOptions(opts, '', 'DELETE', null, {deleteSubtasks: opts.deleteSubTasks});
 
         return this.jiraClient.makeRequest(options, callback, 'Issue Deleted');
     };
